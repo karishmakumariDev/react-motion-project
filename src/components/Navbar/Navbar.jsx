@@ -1,7 +1,17 @@
-import React from "react";
+import React from 'react'
 
-const Navbar = () => {
-  return <div>Navbar</div>;
-};
+function Navbar() {
+  return (
+    <nav className='top-0 left-0 z-20 absolute pt-0 w-full text-white'>
+        <div className='container'>
+            <div>
+                <h1>
+                     <span className='text-lightOrange'>Coders</span>
+                </h1>
+            </div>
+        </div>
+    </nav>
+  )
+}
 
-export default Navbar;
+export default Navbar
