@@ -2,6 +2,7 @@ import React from "react";
 import BgImage from "../../assets/bg-slate.png";
 import BlackCoffee from "../../assets/black.png";
 import Navbar from "../Navbar/Navbar";
+import { motion } from "framer-motion";
 
 const bgImageStyle = {
   backgroundImage: `url(${BgImage})`,
@@ -13,19 +14,29 @@ const bgImageStyle = {
 function Hero() {
   return (
     <main style={bgImageStyle}>
-      <section className="w-full min-h-[750px]">
+      <section className="relative w-full min-h-[750px]">
         <div className="container">
           {/* Navbar section */}
-          <Navbar/>
+          <Navbar />
           {/* Hero section */}
           <div className="place-items-center grid md:grid grid-cols-1-cols-2 lg:grid-cols-3 min-h-[850px]">
             <div className="space-y-28 mt-[100px] md:mt-0 p-4 text-lightOrange">
-              <h1 className="ml-14 text-7xl leading-tight fon-bold">
+              <motion.h1
+                initial={{ opacity: 0, y: -100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ type: "spring", stiffness: 100, damping:10, delay: 1,  }}
+                className="ml-14 font-bold text-7xl leading-tight"
+              >
                 Blvck Tumbler
-              </h1>
+              </motion.h1>
 
               {/* hero image section */}
-              <div className="relative">
+              <motion.div 
+              initial={{ opacity: 0, y: -100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ type: "spring", stiffness: 100, damping:10, delay: 1.2,  }}
+              
+              className="relative">
                 <div className="z-10 relative space-y-4">
                   <h1 className="text-2xl">Black lifestyle lovers,</h1>
                   <h1 className="opacity-50 text-sm leading-loose">
@@ -38,24 +49,35 @@ function Hero() {
 
                 {/* third div section */}
                 <div className="-top-6 -left-10 absolute bg-gray-700/25 w-[280px] h-[230px]"></div>
-              </div>
+              </motion.div>
             </div>
 
             {/* Hero image section */}
             <div className="relative">
-              <img
+              <motion.img
+                initial={{ opacity: 0, scale:0 }}
+                animate={{ opacity: 1, scale:1 }}
+                transition={{ type: "spring", stiffness: 100, damping:10, delay: 0.4,  }}
                 src={BlackCoffee}
                 alt=""
                 className="z-40 relative img-shadow h-[400px] md:h-[700px]"
               />
-              <div className="top-24 -right-16 z-10 absolute border-[20px] border-primary rounded-full w-[180px] h-[180px]"></div>
+              <motion.div 
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ type: "spring", stiffness: 100, damping:10, delay: 0.8,  }}
+              className="top-24 -right-16 z-10 absolute border-[20px] border-primary rounded-full w-[180px] h-[180px]"></motion.div>
 
               <div className="-top-20 left-[300px] z-[1] absolute">
                 <h1 className="font-bold text-[140px] text-darkGray/40 leading-none scale-150">
                   Blvck Tumbler
                 </h1>
 
-                <div className="space-y-28 mt-[100px] md:mt-0 p-4 text-lightOrange">
+                <motion.div 
+                initial={{ opacity: 0, y: -100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ type: "spring", stiffness: 100, damping:10, delay: 1.2,  }}
+                className="space-y-28 mt-[100px] md:mt-0 p-4 text-lightOrange">
                   <h1 className="opacity-0 ml-14 text-5xl leading-tight fon-bold">
                     Blvck Tumbler
                   </h1>
@@ -63,24 +85,28 @@ function Hero() {
                   {/* hero image section */}
                   <div className="relative">
                     <div className="z-10 relative space-y-4">
-                      <h1 className="text-2xl">Black Tumbler</h1>
+                      <h1 className="text-2xl">Blvck Tumbler</h1>
                       <h1 className="opacity-50 w-[400px] text-sm leading-loose">
                         Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. 
-                        Delectus aspernature, Delectus 
-                        aspernature,Delectus 
-                        aspernature,Delectus aspernature,
-
+                        elit. Delectus aspernature, Delectus
+                        aspernature,Delectus aspernature,Delectus aspernature,
                       </h1>
                     </div>
 
                     {/* third div section */}
                     <div className="-top-6 -right-10 absolute bg-gray-700/25 w-[280px] h-[230px]"></div>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="top-0 right-0 z-10 absolute bg-gradint-to-b from-primary/80 to-primaryDark/80 backdrop-blur-sm w-[140px] h-full">
+            <div className="flex justify-center items-center gap-6 w-full h-full text-white">
+                <div></div>
+                <div></div>
+            </div>
         </div>
       </section>
     </main>
