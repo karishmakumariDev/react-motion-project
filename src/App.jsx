@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "./components/Hero/Hero";
 import Services from "./components/services/services";
 import WhereToBuy from "./components/WhereToBuy/WhereToBuy";
-// import AppBanner from "./components/AppBanner/AppBanner";
+import AppBanner from "./components/AppBanner/AppBanner";
 // import Footer from "./components/Footer/Footer.jsx";
 
 const App = () => {
@@ -11,6 +11,7 @@ const App = () => {
       <Hero/>
       <Services/>
       <WhereToBuy/>
+      <AppBanner/>
     </div>
   );
 };

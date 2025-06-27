@@ -26,7 +26,7 @@ const WhereToBuy = () => {
               type: "spring",
               stiffness: 100,
               damping: 10,
-              delay: 0.2,
+              delay: 0.4,
             }}
             className="flex gap-4"
           >
@@ -52,7 +52,7 @@ const WhereToBuy = () => {
               type: "spring",
               stiffness: 100,
               damping: 10,
-              delay: 0.2,
+              delay: 0.6,
             }}
             className="flex gap-4 mt-4"
           >
@@ -77,7 +77,7 @@ const WhereToBuy = () => {
               type: "spring",
               stiffness: 100,
               damping: 10,
-              delay: 0.2,
+              delay: 0.8,
             }}
             className="w-full primary-btn"
           >
