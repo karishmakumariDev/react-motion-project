@@ -25,7 +25,7 @@ function Hero() {
             <div className="space-y-28 mt-[100px] md:mt-0 p-4 text-lightOrange">
               <motion.h1
                 initial={{ opacity: 0, y: -100 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{
                   type: "spring",
                   stiffness: 100,
